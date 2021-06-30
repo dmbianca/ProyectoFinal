@@ -78,11 +78,13 @@ public class Controlador extends HttpServlet {
 		String AnimalNombre = request.getParameter("AnimalNombre");
 		String AnimalEdad = request.getParameter("AnimalEdad");
 		String AnimalTipo = request.getParameter("AnimalTipo");
-		String AnimalId = request.getParameter("AnimalId");
+		int AnimalId = Integer.parseInt(request.getParameter("AnimalId"));
 		String AnimalRaza = request.getParameter("AnimalRaza");
 		String AnimalSexo = request.getParameter("AnimalSexo");
+		int AnimalAlta = Integer.parseInt(request.getParameter("AnimalAlta"));
+		String AnimalPath = request.getParameter("AnimalPath");
 
-		Animales ani = new Animales(AnimalNombre, AnimalEdad, AnimalTipo, AnimalId, AnimalRaza, AnimalSexo);
+		Animales ani = new Animales(AnimalNombre, AnimalEdad, AnimalTipo, AnimalId, AnimalRaza, AnimalSexo, AnimalAlta, AnimalPath);
 		DAO UsuDao = new DAO();
 
 		String destino = "index.jsp";
@@ -90,9 +92,9 @@ public class Controlador extends HttpServlet {
 		try {
 			if (opcion.equals("e")) {
 			}
-				UsuDao.modificarAnimales(Animales);
+				UsuDao.ModificarAnimal(ani);
 			if (opcion.equals("a")) {
-				UsuDao.altaDpto(dpto);
+				UsuDao.AltaAnimal(ani);
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
