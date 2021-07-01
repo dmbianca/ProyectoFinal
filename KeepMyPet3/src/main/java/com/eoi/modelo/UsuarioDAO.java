@@ -4,13 +4,22 @@
 	import java.sql.PreparedStatement;
 	import java.sql.ResultSet;
 	import java.sql.SQLException;
+import java.sql.Statement;
 
-	import com.eoi.servicios.conexion;
+import com.eoi.servicios.conexion;
 	public class UsuarioDAO {
 		
 		Connection con;
 		PreparedStatement pst;
 		
+		
+		//seleccionamos todos los usuarios
+		public void seleccionarUsuarios(Usuarios u) throws SQLException {
+			Connection con = conexion.getInstance().getConnection();
+			String sql="SELECT * FROM usuario";
+			Statement st= con.createStatement();
+			ResultSet rs= st.executeQuery(sql);
+		}
 		//borramos un usuario
 		public void BorraUsuario(Usuarios u) throws SQLException {
 			String sql = "DELETE * FROM Usuarios WHERE usuId=?";
