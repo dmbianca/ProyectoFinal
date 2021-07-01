@@ -9,94 +9,56 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-import com.eoi.modelo.Departamento;
-import com.eoi.modelo.DepartamentoDAO;
-
+import com.eoi.modelo.UsuarioDAO;
+import com.eoi.modelo.Usuarios;
+import com.eoi.modelo.*;
+import com.eoi.modelo.CuentaDAO;
 /**
- * Servlet implementation class Controlador
+ * Servlet implementation class Login
  */
-@WebServlet("/Controlador")
-public class Controlador extends HttpServlet {
+@WebServlet("/Login")
+public class Login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	/**
-	 * @see HttpServlet#HttpServlet()
-	 */
-	public Controlador() {
+	public Login() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
-
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String opcion = request.getParameter("opcion");
-		String coddepto = request.getParameter("coddepto");
-		DepartamentoDAO ddao = new DepartamentoDAO();
-
-		Departamento dpto = null;
-		String destPage = "datosdepartamento.jsp";
-
-		switch (opcion) {
-		case "e":
-			destPage = "editardepartamento.jsp";
-			try {
-				dpto = ddao.getDepartamento(coddepto);
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-			request.setAttribute("dpto", dpto);
-
-			break;
-		case "b":
-			try {
-				ddao.borrarDpto(coddepto);
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-
-			break;
-		}
-
-		RequestDispatcher dispatcher = request.getRequestDispatcher(destPage);
-		dispatcher.forward(request, response);
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
-		String opcion = request.getParameter("opcion");
-		String coddepto = request.getParameter("coddepto");
-		String nombredpto = request.getParameter("nombredpto");
-		String ciudad = request.getParameter("ciudad");
-		String coddirector = request.getParameter("coddirector");
-
-		Departamento dpto = new Departamento(coddepto, nombredpto, ciudad, coddirector);
-		DepartamentoDAO ddao = new DepartamentoDAO();
-
-		String destPage = "datosdepartamento.jsp";
+		String mail = request.getParameter("UsuMail");
+		String pass = request.getParameter("UsuPass");
+		
+		CuentaDAO Cdao = new CuentaDAO();
+		//UsuarioDAO udao = new UsuarioDAO();
+		Usuarios usu = null;
+		String pageDest = "index.html";
 
 		try {
-			if (opcion.equals("e")) {
-			}
-				ddao.modificarDpto(dpto);
-			if (opcion.equals("a")) {
-				ddao.altaDpto(dpto);
+			usu = Cdao.login(mail, pass);
+			if (usu != null) {
+				pageDest = "futura pagina del usuario XXXXXXXXXXXXXXXXXXXXXXXXXX CAMBIAR";
+				HttpSession sesion = request.getSession();
+				sesion.setAttribute("UsuNombre", usu.getUsuNombre());
+				sesion.setAttribute("UsuRol", usu.getUsuRol());
+			} else {
+				String msgerr = "Usuario y Contraseña incorrectos";
+				request.setAttribute("msgerr", msgerr);
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		RequestDispatcher dispatcher = request.getRequestDispatcher(destPage);
-		dispatcher.forward(request, response);
+		RequestDispatcher rd = request.getRequestDispatcher(pageDest);
+		rd.forward(request, response);
+		
 	}
 
 }

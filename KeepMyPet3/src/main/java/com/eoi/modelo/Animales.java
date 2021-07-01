@@ -13,7 +13,7 @@ public class Animales {
         super();
 
     }
-    public Animales(String AnimalNombre, String AnimalTipo, String AnimalEdad, int AnimalId, String AnimalRaza,
+    public Animales(String AnimalNombre, String AnimalTipo, String AnimalEdad, int AnimalId,  String AnimalRaza,
             String AnimalSexo, int AnimalAlta, String AnimalPath) {
         super();
         this.AnimalNombre = AnimalNombre;
@@ -76,7 +76,7 @@ public class Animales {
 	@Override
 	public String toString() {
 		return "Animales [AnimalNombre=" + AnimalNombre + ", AnimalTipo=" + AnimalTipo + ", AnimalEdad=" + AnimalEdad
-				+ ", AnimalId=" + AnimalId + ", AnimalRaza=" + AnimalRaza + ", AnimalSexo=" + AnimalSexo
+				+ ", AnimalId=" + ", AnimalRaza=" + AnimalRaza + ", AnimalSexo=" + AnimalSexo
 				+ ", AnimalAlta=" + AnimalAlta + ", AnimalPath=" + AnimalPath + "]";
 	}
 	
