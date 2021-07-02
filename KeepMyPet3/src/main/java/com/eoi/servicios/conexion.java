@@ -9,7 +9,7 @@ public class conexion {
 
     private static conexion instancia;
     private Connection connection;
-    private String url = "https://github.com/MiguelCanoGracia/keep-my-pet/blob/master/KeepMyPet.sql";
+    private String url = "https://github.com/dmbianca/ProyectoFinal.git";
     private String username = "MiguelCanoGracia";
     private String password = "g61659195";
 
