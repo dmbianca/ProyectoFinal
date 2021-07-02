@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `keepmypet` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `keepmypet`;
 -- MySQL dump 10.13  Distrib 8.0.25, for Win64 (x86_64)
 --
 -- Host: localhost    Database: keepmypet
@@ -31,6 +29,8 @@ CREATE TABLE `animales` (
   `AnimalId` int NOT NULL AUTO_INCREMENT,
   `AnimalRaza` varchar(45) DEFAULT NULL,
   `AnimalSexo` varchar(45) NOT NULL,
+  `AnimalAlta` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `AnimalPath` varchar(300) NOT NULL,
   PRIMARY KEY (`AnimalId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -55,14 +55,15 @@ CREATE TABLE `usuarios` (
   `UsuId` int NOT NULL AUTO_INCREMENT,
   `UsuNombre` varchar(45) NOT NULL,
   `UsuApellido` varchar(45) NOT NULL,
-  `UsuNacimiento` varchar(45) NOT NULL,
-  `UsuAlta` varchar(45) DEFAULT NULL,
+  `UsuNacimiento` date NOT NULL,
+  `UsuAlta` datetime DEFAULT CURRENT_TIMESTAMP,
   `UsuMail` varchar(45) NOT NULL,
   `UsuPass` varchar(45) NOT NULL,
   `UsuRol` varchar(45) DEFAULT NULL,
   `UsuCiudad` varchar(45) NOT NULL,
   `UsuDNI` varchar(45) NOT NULL,
-  PRIMARY KEY (`UsuId`,`UsuMail`,`UsuDNI`)
+  `UsuTelf` int NOT NULL,
+  PRIMARY KEY (`UsuId`,`UsuMail`,`UsuDNI`,`UsuTelf`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -84,4 +85,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-06-28 19:49:17
+-- Dump completed on 2021-07-02 15:50:19
