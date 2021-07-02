@@ -66,7 +66,20 @@ Sabemos que dar en adopción a tu mascota no siempre es facil. Con nosotros tend
 
 <div id="darEnAdopcion">
 <h1>Dar en adopcion</h1>
-<form action:" " method:"post">
+<form action="" method="post">
+<small>
+<label for="nombre">Nombre:</label>
+<input type="text"  placeholder="escriba su nombre aqui" required><br>
+
+<label for="DNI">DNI:</label>
+<input type="text"  placeholder="escriba su DNI aqui" required><br>
+<label for="correo electronico">Correo electronico:</label>
+<input type="email"  placeholder="ej:fulanito.perez@gmail.com" required><br>
+
+<label for="telefono">Telefono de contacto:</label>
+<input type="tel"  placeholder="escriba su telefono aqui" required><br>
+
+
 <label for="tipo de animal">Tipo de animal:</label>
 <select name="animal"required>
 <option value="perro">Perro</option>
@@ -97,6 +110,7 @@ Sabemos que dar en adopción a tu mascota no siempre es facil. Con nosotros tend
 <label for="imagen mascota">Aporta una carpeta con 4 imagenes de tu mascota:</label>
 <input type="file" name="carrusel mascota"  required><br>
 <input type="submit" name="enviar">
+</small>
 </form>
 </div>
 <footer class="bg-dark padding-max bg-cercle-verd">
