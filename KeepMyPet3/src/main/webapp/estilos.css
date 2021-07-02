@@ -2,7 +2,7 @@ html,body{
     background-color: #98E4FF;
 }
 
-input#nombre{
+input#email{
     position: absolute;
     left: 50px;
     top: 30px;
@@ -45,8 +45,8 @@ i#iconollave{
 }
 iframe{
     position: absolute;
-    left: 800px;
-    top: 230px;
+    right: 20px;
+    top: 150px;
 }
 
 footer#otros {
@@ -80,4 +80,18 @@ i#contact{
 img{
     height: 200px;
     width: 70px;
+}
+div#Protectora1{
+	width:400px;
+}	
+	div#tele1{
+    position: absolute;
+    right: 20px;
+    top: 80px;
+}
+div#Protectora2{
+	width:400px;
+}
+div#Protectora3{
+	width:400px;
 }
