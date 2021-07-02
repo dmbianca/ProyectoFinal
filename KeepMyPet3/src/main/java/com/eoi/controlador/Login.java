@@ -34,21 +34,25 @@ public class Login extends HttpServlet {
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String mail = request.getParameter("UsuMail");
-		String pass = request.getParameter("UsuPass");
+		String UsuMail = request.getParameter("UsuMail");
+		String UsuPass = request.getParameter("UsuPass");
 		
 		CuentaDAO Cdao = new CuentaDAO();
 		//UsuarioDAO udao = new UsuarioDAO();
 		Usuarios usu = null;
-		String pageDest = "index.html";
+		//datos usuarios
+		String pageDest = "index.jsp";
 
 		try {
-			usu = Cdao.login(mail, pass);
+			usu = Cdao.login(UsuMail, UsuPass);
+			// el empleado existe en la base de dato
 			if (usu != null) {
-				pageDest = "futura pagina del usuario XXXXXXXXXXXXXXXXXXXXXXXXXX CAMBIAR";
+				pageDest = "perfilUsu.jsp";
+				// Abrimos sesion
 				HttpSession sesion = request.getSession();
 				sesion.setAttribute("UsuNombre", usu.getUsuNombre());
 				sesion.setAttribute("UsuRol", usu.getUsuRol());
+			//Nuevo usario a meter
 			} else {
 				String msgerr = "Usuario y Contraseña incorrectos";
 				request.setAttribute("msgerr", msgerr);
