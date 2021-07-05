@@ -79,9 +79,26 @@
 	<div id="login">
     <div class="card login-card bg-dark" style="width: 250px; height: 200px;">
 
+<<<<<<< HEAD
+      <form action="mascotasEnAdopcion.html" method="post">
+        <i id="iconopersona" class="fa fa-user bg-warning"></i>
+        <input type="email" id="email" name="UsuMail" placeholder="Correo electrónico">
+        <br />
+        <i id="iconollave" class="fas fa-key bg-warning"></i>
+        <input type="password" id="pass" name="UsuPass" placeholder="Contraseña">
+        <br />
+        <input type="submit" id="enviar">
+      </form>
+    </div>
+  </div>
+  <div class="col-md-7">
+=======
+		<form method="post" action="adoptarFormulario.html">
+=======
 		<form method="post" action="perfilUsu.jsp">
 			
 			<div id="correo"><label for ="email"></label>
+>>>>>>> e77d671893d92e079e66e083b218c556f3223457
 			<i id="iconopersona" class="fa fa-user bg-warning"></i>
 			<input class="input" type="email" name="UsuMail" placeholder="Nombre de Usuario"required>*<br>
 			</div>
