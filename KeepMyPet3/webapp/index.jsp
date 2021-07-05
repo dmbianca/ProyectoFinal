@@ -7,7 +7,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HAZTE COLABORADOR</title>
+  <title>LOGIN</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
@@ -53,6 +53,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="darAdopcionFormulario.html">Dar en adopcion</a>
              </li>
+             <li class="nav-item">
+                <a class="nav-link" href="perfilUsu.jsp">Mi area personal</a>
+             </li>
 
           </ul>
         </div>
@@ -76,11 +79,12 @@
 	<div id="login">
     <div class="card login-card bg-dark" style="width: 250px; height: 200px;">
 
-		<form method="post" action="perfulUsu.jsp">
+		<form method="post" action="perfilUsu.jsp">
 			
 			<div id="correo"><label for ="email"></label>
 			<i id="iconopersona" class="fa fa-user bg-warning"></i>
 			<input class="input" type="email" name="UsuMail" placeholder="Nombre de Usuario"required>*<br>
+			</div>
 			<div id="password">
 			<label for ="pass"></label>
 			<i id="iconollave" class="fas fa-key bg-warning"></i>
@@ -90,6 +94,7 @@
         	<input type="submit" value="Login" id="enviar">
 			<span style="color: red"><%=(request.getAttribute("msgerr") == null) ? "" : request.getAttribute("msgerr") %></span>
 		</form>
+  	</div>
   	</div>
   	</div>
   	<div class="col-md-7">
@@ -111,6 +116,7 @@
           <p>Radwane Abdessamie</p>
           <p>Dimodena Bianca Leonela</p>
           <p>Cano Garcia Miguel</p>
+          <p>Adriana de Paz Rovira </p>
         </div>
         <div class="col-md-3 mb-0">
           <h5 class="text-decoration-underline">Contactanos</h5>

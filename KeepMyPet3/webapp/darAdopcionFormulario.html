@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<header class="h1" ><a href="index.html" style='text-decoration:none;color:black;(otros)'>Keep My Pet <i class="fas fa-paw"></a></i></header>   
+<header class="h1" ><a href="index.jsp" style='text-decoration:none;color:black;(otros)'>Keep My Pet <i class="fas fa-paw"></a></i></header>   
 
 
 <div id="lateral">
@@ -31,22 +31,25 @@ Sabemos que dar en adopción a tu mascota no siempre es facil. Con nosotros tend
           <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Login</a>
+                <a class="nav-link active" aria-current="page" href="index.jsp">Login</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Webs Amigas</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Protectoras</a>
+                <a class="nav-link" href="Protectoras.html">Protectoras</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Mascotas En Adopcion</a>
+                <a class="nav-link" href="mascotasEnAdopcion.html">Mascotas En Adopcion</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Colaboradores</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Hazte Colaborador</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="darAdopcionFormulario.html">Dar en adopcion</a>
               </li>
               
             </ul>
@@ -67,18 +70,6 @@ Sabemos que dar en adopción a tu mascota no siempre es facil. Con nosotros tend
 <div id="darEnAdopcion">
 <h1>Dar en adopcion</h1>
 <form action="" method="post">
-<small>
-<label for="nombre">Nombre:</label>
-<input type="text"  placeholder="escriba su nombre aqui" required><br>
-
-<label for="DNI">DNI:</label>
-<input type="text"  placeholder="escriba su DNI aqui" required><br>
-<label for="correo electronico">Correo electronico:</label>
-<input type="email"  placeholder="ej:fulanito.perez@gmail.com" required><br>
-
-<label for="telefono">Telefono de contacto:</label>
-<input type="tel"  placeholder="escriba su telefono aqui" required><br>
-
 
 <label for="tipo de animal">Tipo de animal:</label>
 <select name="animal"required>
@@ -110,7 +101,7 @@ Sabemos que dar en adopción a tu mascota no siempre es facil. Con nosotros tend
 <label for="imagen mascota">Aporta una carpeta con 4 imagenes de tu mascota:</label>
 <input type="file" name="carrusel mascota"  required><br>
 <input type="submit" name="enviar">
-</small>
+
 </form>
 </div>
 <footer class="bg-dark padding-max bg-cercle-verd">

@@ -1,5 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HAZTE COLABORADOR</title>
+  <title>LOGIN</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
@@ -21,6 +19,8 @@
 
 
 <header class="h1" ><a href="index.jsp" style='text-decoration:none;color:black;(otros)'>Keep My Pet <i class="fas fa-paw"></a></i></header>     
+
+
 
 
   <div class="collapse" id="navbarToggleExternalContent">
@@ -71,40 +71,33 @@
     </div>
   </nav>
 
-	
-	<h1> Acceso a tu cuenta </h1>
-	<div id="login">
-    <div class="card login-card bg-dark" style="width: 250px; height: 200px;">
 
-		<form method="post" action="perfulUsu.jsp">
-			
-			<div id="correo"><label for ="email"></label>
-			<i id="iconopersona" class="fa fa-user bg-warning"></i>
-			<input class="input" type="email" name="UsuMail" placeholder="Nombre de Usuario"required>*<br>
-			<div id="password">
-			<label for ="pass"></label>
-			<i id="iconollave" class="fas fa-key bg-warning"></i>
-			<input class="input" type="password" name="UsuPass" placeholder="ContraseÒa"  required>*<br>
-			</div>
-			<br />
-        	<input type="submit" value="Login" id="enviar">
-			<span style="color: red"><%=(request.getAttribute("msgerr") == null) ? "" : request.getAttribute("msgerr") %></span>
-		</form>
-  	</div>
-  	</div>
-  	<div class="col-md-7">
-
+ <div id="Protectora1">
+ <h6><a href="https://www.facebook.com/Adaa-Defensa-Animales-Altea-808273809221489/">Adaa, Asociacion en defensa de los animales altea</a></h6>
+ <p><h9>Esta asociacion con base en Altea, se trata de una protectora que trata de proteger a los seres mas indefensos de nuestra sociedad, los animales.</h9></p>
+ </div>
+  <div id="Protectora2">
+ <h6><a href="https://adopcionescereco.org/">Cereco,una nueva manera de adoptar a los peludos</a></h6>
+ <p><h9>Adopcionescereco nace de la iniciativa de Cereco, centro de recogida de animales de compa√±√≠a, para proporcionar a los animales abandonados en las calles un refugio y la posibilidad de ser adoptados.</h9></p>
+ </div>
+  <div id="Protectora3">
+ <h6><a href="http://www.animalesadopcion.com/component/k2/itemlist/user/470-adypa">luchando por nuestros objetivos</a></h6>
+ <p><h9>ADYPA es una asociaci√≥n sin √°nimo de lucro que se sustenta √∫nicamente con las cuotas de los socios y los donativos que recibe.</h9></p>
+ </div>
+  <div class="col-md-7">
     <div class="embed-responsive embed-responsive-16by9 mt-0 bt-0">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/85MppyLJHz0" allowfullscreen></iframe>
+    <div id="tele1">
+      <iframe width="460" height="215" src="https://www.youtube.com/embed/wh1guj5J9LY" allowfullscreen></iframe>
+    </div>
     </div>
   </div>
-  <footer class="bg-dark padding-max bg-cercle-verd" id="inicio">
+  <footer class="bg-dark padding-max bg-cercle-verd" id="otros">
     <div class="container">
       <div class="row">
         <div class="col-md-3 mb-0">
           <h5 class="text-decoration-underline">Sobre Nosotros</h5>
-          <p>Somos un grupo de estudiantes de programaciÛn que se nos encomendÛ el proyecto final de hacer una pagina
-            web y decidimos ponerlo al servicio del publico haciendo una pagina de adopciÛn de animales.</p>
+          <p>Somos un grupo de estudiantes de programaci√≥n que se nos encomend√≥ el proyecto final de hacer una pagina
+            web y decidimos ponerlo al servicio del publico haciendo una pagina de adopci√≥n de animales.</p>
         </div>
         <div class="col-md-3 mb-0">
           <h5 class="text-decoration-underline">Colaboradores del Proyecto</h5>
@@ -115,7 +108,7 @@
         <div class="col-md-3 mb-0">
           <h5 class="text-decoration-underline">Contactanos</h5>
           <p><i id="contact" class="fab fa-instagram"></i>&nbsp;keepMyPetSocial</p>
-          <p><i id="contact" class="fab fa-twitter"></i> &nbsp;@keepMyPetEspaÒa</p>
+          <p><i id="contact" class="fab fa-twitter"></i> &nbsp;@keepMyPetEspa√±a</p>
           <p><i id="contact" class="fab fa-facebook-f"></i> &nbsp;keepMyPet</p>
         </div>
       </div>
