@@ -75,7 +75,7 @@
 	<h1> Acceso a tu cuenta </h1>
 	<div id="login">
     <div class="card login-card bg-dark" style="width: 250px; height: 200px;">
-<<<<<<< HEAD:KeepMyPet3/src/main/webapp/index.html
+
       <form action="mascotasEnAdopcion.html" method="post">
         <i id="iconopersona" class="fa fa-user bg-warning"></i>
         <input type="email" id="email" name="UsuMail" placeholder="Correo electrónico">
@@ -102,7 +102,7 @@
   	</div>
  	</div>
   	<div class="col-md-7">
->>>>>>> adbaecc12c0391cec743391569fab3e9fed01916:KeepMyPet3/src/main/webapp/index.jsp
+
     <div class="embed-responsive embed-responsive-16by9 mt-0 bt-0">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/85MppyLJHz0" allowfullscreen></iframe>
     </div>
