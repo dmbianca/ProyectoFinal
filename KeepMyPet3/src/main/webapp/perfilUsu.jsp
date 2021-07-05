@@ -58,7 +58,7 @@
                                 <a class="nav-link" href="index.jsp">Login</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Webs Amigas</a>
+                                <a class="nav-link" href="websAmigas.html">Webs Amigas</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="Protectoras.html">Protectoras</a>
@@ -70,7 +70,7 @@
                                 <a class="nav-link" href="#">Colaboradores</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Hazte Colaborador</a>
+                                <a class="nav-link" href="HazteColaborador.jsp">Hazte Colaborador</a>
                             </li>
                             
 
