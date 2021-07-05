@@ -26,7 +26,7 @@
 			if (session.getAttribute("UsuRol").equals("admin")) {
 			%>
 
-			<li><a href="#"> Home</a></li>
+			<li><a href="index.jsp"> Home</a></li>
 			<%
 			}
 			%>

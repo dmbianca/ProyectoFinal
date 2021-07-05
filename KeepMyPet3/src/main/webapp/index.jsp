@@ -75,34 +75,25 @@
 	<h1> Acceso a tu cuenta </h1>
 	<div id="login">
     <div class="card login-card bg-dark" style="width: 250px; height: 200px;">
-<<<<<<< HEAD:KeepMyPet3/src/main/webapp/index.html
-      <form action="mascotasEnAdopcion.html" method="post">
-        <i id="iconopersona" class="fa fa-user bg-warning"></i>
-        <input type="email" id="email" name="UsuMail" placeholder="Correo electrÃ³nico">
-        <br />
-        <i id="iconollave" class="fas fa-key bg-warning"></i>
-        <input type="password" id="pass" name="UsuPass" placeholder="ContraseÃ±a">
-        <br />
-        <input type="submit" id="enviar">
-      </form>
-    </div>
-  </div>
-  <div class="col-md-7">
-=======
+
 		<form method="post" action="adoptarFormulario.html">
+			
+			<div id="correo"><label for ="email"></label>
 			<i id="iconopersona" class="fa fa-user bg-warning"></i>
-			<label for "email">Email:</label>
 			<input class="input" type="email" name="UsuMail" placeholder="Nombre de Usuario"required>*<br>
-			<label for ="pass">Contraseña:</label>
+			<div id="password">
+			<label for ="pass"></label>
+			<i id="iconollave" class="fas fa-key bg-warning"></i>
 			<input class="input" type="password" name="UsuPass" placeholder="Contraseña"  required>*<br>
+			</div>
 			<br />
         	<input type="submit" value="Login" id="enviar">
 			<span style="color: red"><%=(request.getAttribute("msgerr") == null) ? "" : request.getAttribute("msgerr") %></span>
 		</form>
   	</div>
- 	</div>
+  	</div>
   	<div class="col-md-7">
->>>>>>> adbaecc12c0391cec743391569fab3e9fed01916:KeepMyPet3/src/main/webapp/index.jsp
+
     <div class="embed-responsive embed-responsive-16by9 mt-0 bt-0">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/85MppyLJHz0" allowfullscreen></iframe>
     </div>
