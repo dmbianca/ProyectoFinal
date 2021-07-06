@@ -137,7 +137,7 @@
         </div>
         <div class="col-md-3 mb-0">
           <h5 class="text-decoration-underline">Contactanos</h5>
-          <p><i id="contact" class="fab fa-instagram"></i>&nbsp;keepMyPetSocial</p>
+          <p><a href="https://www.instagram.com/keepmypet/" style='text-decoration:none;color:white'><i id="contact" class="fab fa-instagram"></i>&nbsp;keepMyPetSocial</a></p>
           <p><i id="contact" class="fab fa-twitter"></i> &nbsp;@keepMyPetEspaña</p>
           <p><i id="contact" class="fab fa-facebook-f"></i> &nbsp;keepMyPet</p>
         </div>
